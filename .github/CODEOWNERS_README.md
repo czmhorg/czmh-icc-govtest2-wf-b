@@ -2,13 +2,13 @@
 # Automatické žádosti o review (CODEOWNERS)
 
 Tento soubor i spravovanou sekci v `.github/CODEOWNERS` generuje denní
-governance reconcile z konfigurace projektu `govtest1` v gov repu
-(`conf.d/projects/govtest1.conf`, klíč `pr_reviewers_team`).
+governance reconcile z konfigurace projektu `govtest2` v gov repu
+(`conf.d/projects/govtest2.conf`, klíč `pr_reviewers_team`).
 
 ## Jak to funguje
 
 - Při otevření PR požádá GitHub o review tým ze spravované sekce
-  (`* @czmhorg/test-pr-reviewers`); konkrétní členy vybírá týmové round robin přiřazení
+  (`* @czmhorg/test-gov-admins`); konkrétní členy vybírá týmové round robin přiřazení
   (autor PR se vynechává).
 - Další reviewery může autor PR kdykoli přidat ručně — eskalace zůstává
   na lidech, žádný automat ji nedělá.
@@ -22,6 +22,6 @@ Zásah do obsahu sekce reconcile vrátí a ohlásí.
 
 ## Cesta ven z mechanismu
 
-Odeberte klíč `pr_reviewers_team` z `conf.d/projects/govtest1.conf`
+Odeberte klíč `pr_reviewers_team` z `conf.d/projects/govtest2.conf`
 (změna konfigurace v gov repu). Příští reconcile spravovanou sekci i tento
 soubor odstraní; vlastní řádky v CODEOWNERS zůstanou zachovány.
